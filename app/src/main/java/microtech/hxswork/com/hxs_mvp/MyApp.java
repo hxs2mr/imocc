@@ -6,4 +6,5 @@ package microtech.hxswork.com.hxs_mvp;
 
 public class MyApp {
     String a;
+    String b;
 }
