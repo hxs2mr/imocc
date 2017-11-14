@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("microtech.hxswork.com.latte.ec.test", appContext.getPackageName());
+        assertEquals("microtech.hxswork.com.Latte.ec.test", appContext.getPackageName());
     }
 }

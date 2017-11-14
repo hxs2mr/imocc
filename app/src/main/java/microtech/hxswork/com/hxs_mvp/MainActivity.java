@@ -3,13 +3,13 @@ package microtech.hxswork.com.hxs_mvp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import microtech.hxswork.com.latte.Delegate.LatteDelegate;
+import microtech.hxswork.com.latte.activity.ProxyActivity;
 
+//单activity
+public class MainActivity extends ProxyActivity{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+    public LatteDelegate setRootDelegare() {
+        return new AppDelegate();
     }
 }
