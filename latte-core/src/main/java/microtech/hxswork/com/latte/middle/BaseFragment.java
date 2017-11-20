@@ -1,12 +1,10 @@
-package microtech.hxswork.com.latte.Delegate;
+package microtech.hxswork.com.latte.middle;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
@@ -15,10 +13,11 @@ import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
  * Created by microtech on 2017/11/10.
  */
 
-public abstract class BaseDelegate extends SwipeBackFragment{
+public abstract class BaseFragment extends SwipeBackFragment{
     public abstract Object setLayout();
     @SuppressWarnings("SpellCheckingInspection")
-    private Unbinder mUnbinder =null;
+    //private Unbinder mUnbinder =null;
+   private Unbinder mUnbinder =null;
     public abstract  void onBindView( @Nullable Bundle savedInstanceState,View rootView);
     @Nullable
     @Override
@@ -31,7 +30,7 @@ public abstract class BaseDelegate extends SwipeBackFragment{
         }
         if (rootView != null)
         {
-            mUnbinder = ButterKnife.bind(this,rootView);
+            mUnbinder=ButterKnife.bind(this,rootView);
             onBindView(savedInstanceState,rootView);
         }
         return rootView;

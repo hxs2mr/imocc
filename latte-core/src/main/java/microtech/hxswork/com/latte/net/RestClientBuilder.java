@@ -2,6 +2,7 @@ package microtech.hxswork.com.latte.net;
 
 import android.content.Context;
 
+import java.io.File;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -29,10 +30,14 @@ public class RestClientBuilder {//建造体
 
     private Context mContext= null;
     private LoaderStyle mLoaderStyle= null;
+    private File mFile= null;
+
+    private String mDownLoaderDir = null;
+    private String mExtension = null;
+    private String mName = null;
     RestClientBuilder() {
 
     }
-
     public final RestClientBuilder url(String url) {
         this.mUrl = url;
         return this;
@@ -43,16 +48,36 @@ public class RestClientBuilder {//建造体
         return this;
     }
 
-    public final RestClientBuilder param(String key, Object value) {
+    public final RestClientBuilder params(String key, Object value) {
         this.PARAMS.put(key, value);
         return this;
     }
 
-    public final RestClientBuilder raw(String raw) {
-        this.mBody = ResponseBody.create(MediaType.parse("application/json;charset=utf-8"), raw);
+
+    public final RestClientBuilder file(File  file) {
+        this.mFile = file;
         return this;
     }
-
+    public final RestClientBuilder file(String  filepath) {
+        this.mFile = new File(filepath);
+        return this;
+    }
+    public final RestClientBuilder dir(String dir){//下载后文件存放在那个目录
+        this.mDownLoaderDir = dir;
+        return this;
+    }
+    public final RestClientBuilder extension(String extension){//文件后缀名
+        this.mExtension = extension;
+        return  this;
+    }
+    public final RestClientBuilder name (String name){//完整的文件名
+        this.mName = name;
+        return  this;
+    }
+    public final RestClientBuilder raw(String raw) {
+        this.mBody = ResponseBody.create(MediaType.parse("application/json;charset=UTF-8"), raw);
+        return this;
+    }
 
     public final RestClientBuilder success(ISuccess iSuccess) {
         this.mISuccess = iSuccess;
@@ -87,7 +112,7 @@ public class RestClientBuilder {//建造体
         return this;
     }
     public final RestClent build() {
-        return new RestClent(mUrl, PARAMS, mIRequest, mISuccess, mIFailure, mIError, mBody,mContext,mLoaderStyle);
+        return new RestClent(mUrl, PARAMS,mDownLoaderDir,mExtension,mName, mIRequest, mISuccess, mIFailure, mIError, mBody,mFile,mContext,mLoaderStyle);
     }
 
 }

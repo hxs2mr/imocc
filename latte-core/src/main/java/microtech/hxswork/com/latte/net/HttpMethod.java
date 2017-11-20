@@ -11,5 +11,5 @@ public enum HttpMethod {//枚举类
     PUT,
     PUT_RAW,
     DELETE,
-    UOLOAD
+    UPLOAD
 }

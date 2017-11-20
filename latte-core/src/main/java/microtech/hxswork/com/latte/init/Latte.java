@@ -1,6 +1,7 @@
 package microtech.hxswork.com.latte.init;
 
 import android.content.Context;
+import android.os.Handler;
 
 import java.util.HashMap;
 
@@ -10,13 +11,23 @@ import java.util.HashMap;
 
 public  final  class Latte {//对外工具类
             public  static Configurator init(Context context){
-                getConfigureation().put(ConfigType.APPLICATION_CONTEXT.name(),context.getApplicationContext());
+                Configurator.getInstance()
+                        .getLatteConfigs()
+                        .put(ConfigKeys.APPLICATION_CONTEXT,context.getApplicationContext());
                 return Configurator.getInstance();
             }
-    public static HashMap<String,Object> getConfigureation(){
-                return Configurator.getInstance().getLatteConfigs();
+
+         public static Configurator getConfigurator() {
+         return Configurator.getInstance();
             }
-            public static Context getApplication(){
-                return (Context) getConfigureation().get(ConfigType.APPLICATION_CONTEXT.name());
+            public static <T> T getConfigureation(Object key){
+             return getConfigurator().getConfiguration(key);
             }
+            public static Context getApplicationContext(){
+                return getConfigureation(ConfigKeys.APPLICATION_CONTEXT);
+            }
+    public static Handler getHandler() {
+        return getConfigureation(ConfigKeys.HANDLER);
+    }
+
 }

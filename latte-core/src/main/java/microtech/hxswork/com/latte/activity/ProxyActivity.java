@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.ContentFrameLayout;
 
 import me.yokeyword.fragmentation.SupportActivity;
-import microtech.hxswork.com.latte.Delegate.LatteDelegate;
+import microtech.hxswork.com.latte.middle.MiddleFragment;
 import microtech.hxswork.com.latte.R;
 
 /**
@@ -13,7 +13,7 @@ import microtech.hxswork.com.latte.R;
  */
 
 public abstract class ProxyActivity extends SupportActivity{
-    public abstract LatteDelegate setRootDelegare();
+    public abstract MiddleFragment setRootDelegare();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
