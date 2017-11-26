@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    >
+<com.youth.banner.Banner
+    android:id="@+id/banner_sign"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:layout_marginBottom="5dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:paddingBottom="5dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/t1"
+            android:text="物场"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/t2"
+            android:text="水果"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/t3"
+            android:text="海鲜"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/t4"
+            android:text="时蔬"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:paddingBottom="5dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@mipmap/t5"
+            android:text="超市"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/t6"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="实体店"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/t7"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="充值中心"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/t8"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:drawablePadding="3dp"
+            android:text="兑换卷"
+            />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#1111"
+            />
+    </LinearLayout>
+</LinearLayout>

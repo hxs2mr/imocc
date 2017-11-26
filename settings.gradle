@@ -1,1 +1,1 @@
-include ':app', ':latte-annotations', ':latte-compter', ':latte-core', ':latteec'
+include ':app', ':mike-annotations', ':mike-compter', ':mike-base', ':mike-ec', ':mike-ui'

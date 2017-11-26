@@ -30,10 +30,9 @@ public class MainActivity extends ProxyActivity implements ILoginListener,ILunch
         StatusBarCompat.translucentStatusBar(this,true);
     }
     @Override
-    public MiddleFragment setRootDelegare() {
+    public MiddleFragment setRootDelegate() {
         return new LauncherFragment();
     }
-
 
     @Override
     public void onLoginSuccess() {
@@ -51,11 +50,11 @@ public class MainActivity extends ProxyActivity implements ILoginListener,ILunch
         switch (tag){
             case SINGED://已经登录
                 Toast.makeText(this,"用户已经登录",Toast.LENGTH_SHORT);
-                startWithPop(new ExBottomFragment());//startWithPop把盏中的上一个fragmen清楚掉
+                getSupportDelegate().startWithPop(new ExBottomFragment());//startWithPop把盏中的上一个fragmen清楚掉
                 break;
             case NOT_SINGED://没有登录
                 Toast.makeText(this,"用户没有登录",Toast.LENGTH_SHORT);
-                startWithPop(new LoginFragment());//startWithPop把盏中的上一个fragmen清楚掉
+                getSupportDelegate().startWithPop(new LoginFragment());//startWithPop把盏中的上一个fragmen清楚掉
                 break;
         }
     }

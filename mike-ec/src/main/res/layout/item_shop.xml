@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_marginBottom="5dp"
+    android:layout_height="120dp">
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/item_shop_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="{fa-check-circle}"
+        android:textColor="@android:color/darker_gray"
+        />
+<android.support.v7.widget.AppCompatImageView
+    android:id="@+id/item_shop_image"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_gravity="center_vertical"
+    />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="商品标题"
+            android:layout_marginBottom="5dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_shop_descr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="商品描述"
+            android:layout_marginBottom="5dp"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_shop_monkey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.0"
+            android:textColor="@android:color/holo_orange_dark"
+            android:typeface="monospace"
+            android:layout_marginBottom="5dp"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom"
+        >
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/item_shop_delete"
+            android:layout_width="20dp"
+            android:text="{fa-minus-square-o}"
+            android:layout_height="20dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_shop_counts"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="12"
+            />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/item_shop_add"
+            android:layout_width="20dp"
+            android:text="{fa-plus-square-o}"
+            android:layout_height="20dp"
+            android:textSize="24sp"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>
